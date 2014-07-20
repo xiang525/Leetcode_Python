@@ -6,6 +6,6 @@
 
 class Solution:
     # @param head, a ListNode
-    # @return a ListNod
+    # @return a ListNode
     def sortList(self, head):
-    
+        
