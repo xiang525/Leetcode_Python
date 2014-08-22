@@ -9,9 +9,6 @@ class Solution:
             substring += s[i]
             print i
             for j in range(i + 1, len(s)):
-                #                 print substring
-                #                 print j
-                #                 print s[j], substring
                 if s[j] not in substring:
                     substring += str(s[j])
                     if len(substring) > maxLength:
