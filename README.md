@@ -12,7 +12,7 @@
 
 * Add hint to each problem.
 
-* ~~PEP8 Python~~.
+* ~~PEP8 Format~~.
 
 
 ## Resources:
