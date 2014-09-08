@@ -7,6 +7,3 @@ class Solution:
         st = "".join(digits)
         val = int(st) + 1
         return map(int, str(val))
-
-so = Solution()
-so.plusOne([9, 9, 9])
