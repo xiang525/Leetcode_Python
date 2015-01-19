@@ -13,8 +13,12 @@ Y   I   R
 > convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR". 
 
 ### Hints:
+* create a list of row strings
+* set index and step
+* walking through string by index and step: move to first row, set step to 1, move to last row set step to -1(backward)
+* join strings of each rows
 
 #### References:
 
 #### Tags:
-
+String
