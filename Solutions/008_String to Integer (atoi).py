@@ -25,3 +25,15 @@ class Solution:
         if res > INT_MAX:
             return INT_MIN if sign == -1 else INT_MAX
         return sign * res
+
+
+
+# Option, if can use packages
+# import re
+
+
+# class Solution:
+#     # @return an integer
+
+#     def atoi(self, str):
+#         return int(re.search('[+-]?\d+', str.strip()).group(0))
