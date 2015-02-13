@@ -10,7 +10,12 @@ find(4) -> true
 find(7) -> false
 
 ### Hints:
+Internal data strucuture? -> dict
+1. use dict to store data
 
+Is there any duplicated values?  
+What is the maximum range of its size?  
+ -> if it is too large, you need to calculate the range of matched sum
 #### References:
 
 #### Tags:
