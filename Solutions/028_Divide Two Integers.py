@@ -5,18 +5,18 @@ class Solution:
         if (dividend < 0 and divisor > 0) or (dividend > 0 and divisor < 0):
             if abs(dividend) < abs(divisor):
                 return 0
-        sum = 0
+        summing = 0
         count = 0
         res = 0
         a = abs(dividend)
         b = abs(divisor)
         while a >= b:
-            sum = b
+            summing = b
             count = 1
-            while sum + sum <= a:
-                sum += sum
+            while summing + summing <= a:
+                summing += summing
                 count += count
-            a -= sum
+            a -= summing
             res += count
         if (dividend < 0 and divisor > 0) or (dividend > 0 and divisor < 0):
             res = 0 - res
