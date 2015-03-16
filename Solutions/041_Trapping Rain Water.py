@@ -3,17 +3,23 @@ class Solution:
     # @return an integer
 
     def trap(self, A):
+        # from right to left
         leftmosthigh = [0 for i in range(len(A))]
         leftmax = 0
         for i in range(len(A)):
             if A[i] > leftmax:
                 leftmax = A[i]
             leftmosthigh[i] = leftmax
-        sum = 0
+        # from left to right 
+        rightmosthigh = [0 for i in range(len(A))]
         rightmax = 0
         for i in reversed(range(len(A))):
             if A[i] > rightmax:
                 rightmax = A[i]
-            if min(rightmax, leftmosthigh[i]) > A[i]:
-                sum += min(rightmax, leftmosthigh[i]) - A[i]
-        return sum
+            rightmosthigh[i] = rightmax
+        # print rightmosthigh
+        total = 0
+        for i in range(len(A)):
+            if min(rightmosthigh[i], leftmosthigh[i]) > A[i]:
+                total += min(rightmosthigh[i], leftmosthigh[i]) - A[i]
+        return total
