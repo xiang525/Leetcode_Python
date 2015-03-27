@@ -25,11 +25,14 @@ class Solution:
 
     def recursive_inorder(self, root, tree_list):
         if root:
-            self.inorder(root.left, tree_list)
+            self.recursive_inorder(root.left, tree_list)
             tree_list.append(root.val)
-            self.inorder(root.right, tree_list)
+            self.recursive_inorder(root.right, tree_list)
 
     def inorderTraversal(self, root):
         tree_list = []
+        # the iterative way
         self.iterative_inorder(root, tree_list)
+        # the recursive way
+        # self.recursive_inorder(root, tree_list)
         return tree_list

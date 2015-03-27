@@ -12,8 +12,8 @@ class Solution:
 
     def recursive_postorder(self, root, list):
         if root:
-            self.postorder(root.left, list)
-            self.postorder(root.right, list)
+            self.recursive_postorder(root.left, list)
+            self.recursive_postorder(root.right, list)
             list.append(root.val)
 
     def iterative_postorder(self, root, list):
