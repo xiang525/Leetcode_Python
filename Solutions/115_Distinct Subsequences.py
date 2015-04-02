@@ -14,3 +14,6 @@ class Solution:
                 else:
                     dp[i][j] = dp[i - 1][j]
         return dp[len(S)][len(T)]
+
+s = Solution()
+print s.numDistinct("rabbbit", "rabbit")

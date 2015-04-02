@@ -4,7 +4,13 @@ class Solution:
     # @return nothing, please modify the nums list in-place.
     def rotate(self, nums, k):
         n = len(nums)
-        return nums[n-k:n]+nums[:n-k]
+        k %= n
+        self.reverse(nums, 0, n - k)
+        self.reverse(nums, n - k, n)
+        self.reverse(nums, 0, n)
 
-s = Solution()
-s.rotate([1,2], 1)
+    def reverse(self, nums, start, end):
+        for x in range(start, (start + end) / 2):
+            nums[x] ^= nums[start + end - x - 1]
+            nums[start + end - x - 1] ^= nums[x]
+            nums[x] ^= nums[start + end - x - 1]
